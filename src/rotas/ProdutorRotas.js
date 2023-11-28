@@ -7,7 +7,7 @@ import Cesta from "../telas/Cesta";
 const Stack = createNativeStackNavigator();
 
 export default function ProdutorRotas({ComponentePrincipal = Home}) {
-    return <Stack.Navigator>
+    return <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name="HomeScreen" component={ComponentePrincipal}/>
         <Stack.Screen name="Produtor" component={Produtor}/>
         <Stack.Screen name="Cesta" component={Cesta} />
