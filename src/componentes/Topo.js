@@ -3,7 +3,7 @@ import { View, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-nat
 
 import Texto from './Texto';
 
-//import Gradiente from '../assets/gradiente.svg';
+import Gradiente from '../assets/gradiente.svg';
 import topo from '../assets/topo.png';
 import { useNavigation } from '@react-navigation/native';
 import VoltarSVG from '../assets/voltar.svg';
@@ -20,12 +20,12 @@ export default function Topo({ titulo, imagem = topo, altura = ALTURA_PADRAO }) 
   };
   return <>
     <Image source={imagem} style={estilos.topo} />
-    {/*<Gradiente width={largura} height={130 / 360 * largura} style={estilos.gradiente} />*/}
+    <Gradiente width={largura} height={130 / 360 * largura} style={estilos.gradiente} />
     <Texto style={estilos.titulo}>{ titulo }</Texto>
     <TouchableOpacity 
       onPress={handleVoltar}
       style={estilos.botaoVoltar}>
-      <Image source={voltarProvisorio} style={estilos.voltar}/>
+      <VoltarSVG color='white' style={estilos.voltar} />
     </TouchableOpacity>
   </>
 }
@@ -45,7 +45,6 @@ const funcaoEstilos = (altura) => StyleSheet.create({
     fontSize: 16,
     lineHeight: 26,
     color: "white",
-    backgroundColor: "gray",
     fontWeight: "bold",
     padding: 16,
   },
