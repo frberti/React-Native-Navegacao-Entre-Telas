@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Dimensions, TouchableOpacity } from 'react-native';
 
 import Texto from './Texto';
 
-import Gradiente from '../assets/gradiente.svg';
 import topo from '../assets/topo.png';
 import { useNavigation } from '@react-navigation/native';
+
+import Gradiente from '../assets/gradiente.svg';
 import VoltarSVG from '../assets/voltar.svg';
-import voltarProvisorio from '../assets/estrelaCinza.png';
 
 const largura = Dimensions.get('screen').width;
 const ALTURA_PADRAO = 270;
